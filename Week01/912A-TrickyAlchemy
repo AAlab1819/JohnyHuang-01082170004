@@ -1,0 +1,20 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long yellowCrystal, blueCrystal;
+    cin>>yellowCrystal>>blueCrystal;
+    long long yellowBall, greenBall, blueBall;
+    cin>>yellowBall>>greenBall>>blueBall;
+    yellowCrystal=yellowCrystal-yellowBall*2-greenBall;
+    blueCrystal=blueCrystal-blueBall*3-greenBall;
+    long long ans=0;
+    if(blueCrystal<0)
+        ans+=blueCrystal*-1;
+    if(yellowCrystal<0)
+        ans+=yellowCrystal*-1;
+    cout<<ans;
+    return 0;
+}
