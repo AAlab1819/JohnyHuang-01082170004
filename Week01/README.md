@@ -6,7 +6,7 @@
 
 
 ### 854A-Fractions
-[Question](http://codeforces.com/contest/854/problem/A)|[Answer]
+[Question](http://codeforces.com/contest/854/problem/A)|[Answer](http://codeforces.com/contest/854/submission/42413745)
 
 
 ### 988A-Diverse Team
