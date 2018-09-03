@@ -1,1 +1,1 @@
-[SUBMISSION](http://codeforces.com/contest/231/problem/A)
+[SUBMISSION](http://codeforces.com/contest/231/submission/42262546)
