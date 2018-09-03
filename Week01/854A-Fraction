@@ -1,0 +1,18 @@
+#include <iostream>
+#include <algorithm>
+using namespace std;
+
+int main()
+{
+    int n;
+    cin>>n;
+    int numer=0, denom=0;
+    for(int i=1; i<=n/2; i++){
+        if(__gcd(i,n-i)==1){
+            numer=i;
+            denom=n-i;
+        }
+    }
+    cout<<numer<<" "<<denom;
+    return 0;
+}
