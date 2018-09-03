@@ -35,14 +35,14 @@ The amount of crystals she lack will be the absolute value of the yellow or blue
 
 Objective of problem 854A-Fraction to find a numerator and denominator with the highest possible proper irreducible fraction such that
 when summed together results in a positive integer n. There are 4 criterias that needs to be fulfilled the find the answer:
-* Numerator is greater than denominator.
-* GCD (Greatest Common Divisor) of numerator and denominator is 1.
-* Sum of numerator and denominator is n.
-* Its has the highest possible value as a fraction.
+* Numerator is greater than denominator. **Numerator > Denominator**
+* GCD (Greatest Common Divisor) of numerator and denominator is 1. **GCD (numerator, denominator) == 1**
+* Sum of numerator and denominator is n. **Numerator + Denominator == n** 
+* Its has the highest possible value as a fraction. **Numerator / Denominator is closest to 1**
 
-To solve this problem we test for GCD from 1 to n/2, and n-1 to n/2 for numerator and denominator respectively to find only the pair with
-GCD of 1. The endpoint of the test is set at n/2 is because the numerator should be greater than the denominator to produce a proper 
-fraction. The pair of numerator and denominator is set as such because the sum of the 2 will always result in n. GCD of 1 between 
+To solve this problem we test for GCD from 1 to n/2, and n-1 to n/2 for numerator and denominator respectively to find only the pair
+with GCD of 1. The endpoint of the test is set at n/2 is because the numerator should be greater than the denominator to produce a 
+proper fraction. The pair of numerator and denominator is set as such because the sum of the 2 will always result in n. GCD of 1 between 
 numerator and denominator is to find pairs that can form an irreducible fraction. Finally, the highest possible fraction is found by
 overlapping previously stored pairs and only printing after the test is done. 
 
