@@ -18,16 +18,17 @@ To solve this problem we need to first find the amount of yellow or blue crystal
 amount of yellow crystal she lacks will be the amount of yellow crystals she has subtracted by the yellow crystals she needs to create 
 the specified amount of yellow (2 crystals) and green (1 crystal) balls she needed. 
 
-**Yellow crystals left = yellow crystals - (yellow balls x 2 yellow crystals) - (green balls x 1 yellow crystal)**
+**Yellow crystals left/lacks = yellow crystals - (yellow balls x 2 yellow crystals) - (green balls x 1 yellow crystal)**
 
 If the result is a positive number, then that means that she doesn't lack any yellow crystal. If the result is a negative number, then
 that is the amount of yellow crystals that she lacks, or have in excess. Doing the same with the blue crystal, this time blue (3 
 crystals) and green (1 crystal), will result in the amount of blue crystal she lacks. 
 
-**Blue crystals left = blue crystals - (blue balls x 3 blue crystals) - (green balls x 1 blue ball)**
+**Blue crystals left/lacks = blue crystals - (blue balls x 3 blue crystals) - (green balls x 1 blue ball)**
 
 The amount of crystals she lack will be the absolute value of the yellow or blue crystals she lacks, or in the case where she lacks both will be the sum of the absolute value of yellow and blue crystals.
 
+**Total crystals lacks = |blue crystals lacks + 0| or |0 + yellow crystal lacks| or |blue crystals lacks + yellow crystals lacks|**
 
 ### 854A-Fraction
 [Question](http://codeforces.com/contest/854/problem/A)|[Answer](http://codeforces.com/contest/854/submission/42413745)
