@@ -49,3 +49,33 @@ overlapping previously stored pairs and only printing after the test is done.
 
 ### 988A-Diverse Team
 [Question](http://codeforces.com/contest/988/problem/A)|[Answer](https://codeforces.com/contest/988/submission/42444636)
+
+Objective of problem 988A-Diverse Team is to find if it is possible to form a team of the size k with each of them having a distinct
+rating from the specified list of n students. To solve this problem we need to first fill an array with all the student ratings in its
+numerical order.
+
+**Loop i = 0 to n**
+
+**Insert student ratings to array[i]**
+   
+Then we need to find all the distinct ratings of the students, this is done using an integer set (container that only stores unique
+elements). Attempting to insert an element that is already in the set will not cause the set to change, hence making it possible to
+insert all student ratings and result in a set of only distinct ratings.
+
+**Insert to student ratings to set**
+
+Now that we have 2 lists of student ratings (1 containing all ratings with in their numerical order, 1 containing all the distinct
+ratings), we can check if it is possible to form a team of k members with each of them having a distinct rating.
+
+**If set < k then not possible to form team**
+
+If it is possible to form team we need to then match the distinct ratings to their respective numerical order and print it out.
+
+**Loop i = 0 to n**
+
+ **Loop j = 0 to set size**
+  
+  **If array[i] == set[j]**
+  
+   **Print i**
+
