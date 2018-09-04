@@ -48,4 +48,4 @@ overlapping previously stored pairs and only printing after the test is done.
 
 
 ### 988A-Diverse Team
-[Question](http://codeforces.com/contest/988/problem/A)|[Answer]
+[Question](http://codeforces.com/contest/988/problem/A)|[Answer](https://codeforces.com/contest/988/submission/42444636)
