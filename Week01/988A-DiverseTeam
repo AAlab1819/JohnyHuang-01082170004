@@ -1,0 +1,38 @@
+#include <iostream>
+#include <set>
+#include <iterator>
+#include <algorithm>
+#include <vector>
+using namespace std;
+
+int main()
+{
+    int n, k, ratings[100];
+    cin>>n>>k;
+    vector<int> ans;
+    set<int> distinctScores;
+    set<int>::iterator it;
+    for(int i=0; i<n; i++)
+    {
+        cin>>ratings[i];
+        distinctScores.insert(ratings[i]);
+    }
+    if(distinctScores.size()<k)
+        cout<<"NO";
+    else{
+        cout<<"YES"<<endl;
+        for(it=distinctScores.begin();it!=distinctScores.end();it++){
+            for(int i=0; i<n; i++){
+                if(ratings[i]==*it)
+                {
+                    ans.push_back(i+1);
+                    break;
+                }
+            }
+        }
+        sort(ans.begin(),ans.end());
+        for(int i=0; i<k; i++)
+            cout<<ans[i]<<" ";
+    }
+    return 0;
+}
