@@ -44,12 +44,10 @@ be unique to only 2 people.
 
 Sorting Algorithm: Insertion Sort
 
-Objective of problem 230A-Dragons is to find if it is possible to slay all the n dragons with strength x and bonus y given your
-strength s in any order. To solve this problem we must first sort the dragons in an ascending order according to their strength x
-so that we will fight the weakest dragon first. The sorting algorithm used in this scenario is Insertion Sort.
-
-Insertion sort sorts a list by traversing the list per element and swapping the elements in the opposite direction until it is in the
-correct position. 
+Objective of problem 230A-Dragons is to find if it is possible to slay all the **n** dragons with strength **x** and bonus **y** given 
+your strength **s** in any order. To solve this problem we must first sort the dragons in an ascending order according to their strength 
+so that we will fight the weakest dragon first. The sorting algorithm used in this scenario is Insertion Sort. Insertion sort sorts a
+list by traversing the list per element and swapping the elements in the opposite direction until it is in the correct position. 
 
 **Example:**
 
@@ -82,3 +80,6 @@ for i to n
 [Question](http://codeforces.com/problemset/problem/768/A)|[Answer](http://codeforces.com/contest/768/submission/42602686)
 
 Sorting Algorithm: Heap Sort
+
+Objective of the problem 768A-Oath of Night's Watch is to find how many stewards have other stewards with strength **a** that is less 
+than and greater than himself.
