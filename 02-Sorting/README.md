@@ -44,6 +44,39 @@ be unique to only 2 people.
 
 Sorting Algorithm: Insertion Sort
 
+Objective of problem 230A-Dragons is to find if it is possible to slay all the n dragons with strength x and bonus y given your
+strength s in any order. To solve this problem we must first sort the dragons in an ascending order according to their strength x
+so that we will fight the weakest dragon first. The sorting algorithm used in this scenario is Insertion Sort.
+
+Insertion sort sorts a list by traversing the list per element and swapping the elements in the opposite direction until it is in the
+correct position. 
+
+**Example:**
+
+5 8 2 1 10 | First element
+
+5 8 2 1 10 | Second element
+
+2 5 8 1 10 | Third element
+
+1 2 5 8 10 | Fourth element
+
+1 2 5 8 10 | Fifth element
+
+Now that the dragons are sorted per their strength we are now able to find if it is possible to slay the dragons. This is done by
+checking if our strength is greater than the dragon's strength, if so then add its bonus to our strength. If at any point our strength
+is less than the dragon's strength, then it is not possible to slay all the dragons. 
+
+```
+for i to n
+  if s > dragon[i].strength
+    s += dragon[i].bonus
+  else if s < dragon[i].strength
+    print("NO")
+  if i == n
+    print("YES")
+```
+
 ### 768A-Oath of Night's Watch
 
 [Question](http://codeforces.com/problemset/problem/768/A)|[Answer](http://codeforces.com/contest/768/submission/42602686)
