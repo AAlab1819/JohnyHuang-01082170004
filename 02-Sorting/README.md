@@ -8,9 +8,9 @@ Sorting Algorithm: Shell Sort
 
 ### 230A-Dragons
 
-[Question](http://codeforces.com/problemset/problem/230/A)|[Answer]
+[Question](http://codeforces.com/problemset/problem/230/A)|[Answer](http://codeforces.com/contest/230/submission/42700338)
 
-Sorting Algorithm: 
+Sorting Algorithm: Insertion Sort
 
 ### 768A-Oath of Night's Watch
 
