@@ -46,8 +46,10 @@ Sorting Algorithm: Insertion Sort
 
 Objective of problem 230A-Dragons is to find if it is possible to slay all the **n** dragons with strength **x** and bonus **y** given 
 your strength **s** in any order. To solve this problem we must first sort the dragons in an ascending order according to their strength 
-so that we will fight the weakest dragon first. The sorting algorithm used in this scenario is Insertion Sort. Insertion sort sorts a
-list by traversing the list per element and swapping the elements in the opposite direction until it is in the correct position. 
+so that we will fight the weakest dragon first. The sorting algorithm used in this scenario is Insertion Sort. 
+
+Insertion sort sorts a list by traversing the list per element and swapping the elements in the opposite direction until it is in the 
+correct position. 
 
 **Example:**
 
@@ -82,4 +84,18 @@ for i to n
 Sorting Algorithm: Heap Sort
 
 Objective of the problem 768A-Oath of Night's Watch is to find how many stewards have other stewards with strength **a** that is less 
-than and greater than himself.
+than and greater than himself. This is done by sorting the list of **n** stewards in an ascending order and finding how many stewards 
+have strength in-between the steward with the highest and lowest strength. The sorting algorithm used in this scenario is Heap Sort. 
+
+Explain Heap Sort.
+
+Now that the list of stewards has been sorted in an ascending order it is possible to find how many stewards fulfills the criteria.
+This is done by traversing the list by element and tallying up the number of stewards with strength that is not equal to the weakest
+steward or the strongest steward.
+
+```
+for i to n
+  if steward[i] != steward[i] && steward[i] != steward[n-1]
+    counter++
+print(counter)
+```
