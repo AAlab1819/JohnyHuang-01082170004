@@ -87,8 +87,11 @@ Objective of the problem 768A-Oath of Night's Watch is to find how many stewards
 than and greater than himself. This is done by sorting the list of **n** stewards in an ascending order and finding how many stewards 
 have strength in-between the steward with the highest and lowest strength. The sorting algorithm used in this scenario is Heap Sort. 
 
-Explain Heap Sort.
-
+Heap Sort works by repeatingly building a max heap from an array. The largest number which is found on the root of the heap is then 
+swapped with the smallest number. The heap is then heapified to build a max heap again, but with every iteration the size is decreased
+by one as the largest number is "removed" from the heap. This goes on until the size of the heap is smaller than 1 and the list is 
+sorted.
+ 
 Now that the list of stewards has been sorted in an ascending order it is possible to find how many stewards fulfills the criteria.
 This is done by traversing the list by element and tallying up the number of stewards with strength that is not equal to the weakest
 steward or the strongest steward.
