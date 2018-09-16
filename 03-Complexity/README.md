@@ -2,7 +2,7 @@
 
 ### 492B-Vanya and Lanterns
 
-[Question](http://codeforces.com/problemset/problem/492/B)|[Answer]
+[Question](http://codeforces.com/problemset/problem/492/B)|[Answer](https://codeforces.com/contest/492/submission/42955946)
 
 ### 148A-Insomnia Cure
 
