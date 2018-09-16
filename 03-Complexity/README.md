@@ -10,4 +10,4 @@
 
 ### 469A-I Wanna Be the Guy
 
-[Question](http://codeforces.com/problemset/problem/469/A)|[Answer]
+[Question](http://codeforces.com/problemset/problem/469/A)|[Answer](http://codeforces.com/contest/469/submission/42940512)
