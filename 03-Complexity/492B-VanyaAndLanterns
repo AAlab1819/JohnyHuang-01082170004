@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long int n, l;
+    double lightRad=0;
+    cin>>n>>l;
+    long long int a[n];
+    for(int i=0; i<n; i++)
+        cin>>a[i];
+    sort(a, a+n);
+    for(int i=0; i<n-1; i++){
+        if(a[i+1]-a[i]>lightRad)
+            lightRad=a[i+1]-a[i];
+    }
+    lightRad/=2;
+    if(a[0]>lightRad)
+        lightRad=a[0];
+    if(l-a[n-1]>lightRad)
+        lightRad=l-a[n-1];
+    printf("%.10f\n",lightRad);
+    return 0;
+}
