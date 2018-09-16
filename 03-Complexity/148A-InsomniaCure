@@ -1,0 +1,20 @@
+#include <iostream>
+#include <set>
+using namespace std;
+
+int main()
+{
+    int k, l, m, n, d;
+    cin>>k>>l>>m>>n>>d;
+    set<int> ans;
+    for(int i=k; k<=d; k+=i)
+        ans.insert(k);
+    for(int i=l; l<=d; l+=i)
+        ans.insert(l);
+    for(int i=m; m<=d; m+=i)
+        ans.insert(m);
+    for(int i=n; n<=d; n+=i)
+        ans.insert(n);
+    cout<<ans.size();
+    return 0;
+}
