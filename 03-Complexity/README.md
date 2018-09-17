@@ -4,6 +4,12 @@
 
 [Question](http://codeforces.com/problemset/problem/492/B)|[Answer](https://codeforces.com/contest/492/submission/42955946)
 
+Objective of problem 492B-Vanya and Lanterns is to find the minimum light radius each n number of lanterns should have to illuminate
+l length of street. To solve this problem first we find the largest distance between 2 lanterns and divide it by 2. We then compare it
+to the distance of the first lantern to the beginning of the street to the previously obtained light radius, if the distance is larger
+then the new light distance will be the obtained distance. Doing the same but with the distance of the last lantern to the end of the 
+street we will then obtain the collective minimum light radius required to illuminate the entire street.
+
 ### 148A-Insomnia Cure
 
 [Question](http://codeforces.com/problemset/problem/148/A)|[Answer](http://codeforces.com/contest/148/submission/42937887)
