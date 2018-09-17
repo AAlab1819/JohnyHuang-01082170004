@@ -34,8 +34,8 @@ takes O(log(n)) time and it would only insert once per loop, hence best case wou
 [Question](http://codeforces.com/problemset/problem/469/A)|[Answer](http://codeforces.com/contest/469/submission/42940512)
 
 Objective of problem 469A-I Wanna Be the Guy is to find if it is possible for the 2 boys to finish all the levels in a game given that
-each boy can pass a set levels. To solve this problem we attempt to input all the levels each boys can pass into a set. If the size of the
-set is equal to the total number of levels, then it is possible to pass all the levels, otherwise it is not possible. 
+each boy can pass a set levels. To solve this problem we attempt to input all the levels each boys can pass into a set. If the size of 
+the set is equal to the total number of levels, then it is possible to pass all the levels, otherwise it is not possible. 
 
 Best case time complexity: O(log(n))
 
