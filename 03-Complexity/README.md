@@ -12,6 +12,8 @@ last lantern to the end of the street we will then obtain the collective minimum
 
 Best case time complexity: O(1)
 
+Average case time complexity: O(nlog(n))
+
 Best case for this problem is O(1) which could be obtained if there is only 1 lantern in a 1 length street. In this case no loops occur,
 hence the best case would be O(1).
 
@@ -26,8 +28,10 @@ harmed.
 
 Best case time complexity: O(log(n))
 
-Best case for this problem is O(log(n)) which could be obtained if each of the 4 method are equal and occur only once. Insertion of a set
-takes O(log(n)) time and it would only insert once per loop, hence best case would be O(log(n)).
+Average case time complexity: O(nlog(n))
+
+Best case for this problem is O(log(n)) which could be obtained if each of the 4 method are equal and occur only once. Insertion of a 
+set takes O(log(n)) time and it would only insert once per loop, hence best case would be O(log(n)).
 
 ### 469A-I Wanna Be the Guy
 
@@ -38,6 +42,8 @@ each boy can pass a set levels. To solve this problem we attempt to input all th
 the set is equal to the total number of levels, then it is possible to pass all the levels, otherwise it is not possible. 
 
 Best case time complexity: O(log(n))
+
+Average case time complexity: O(nlog(n))
 
 Best case for this problem is O(log(n)) which could be obtained if each boy can only pass 1 level. Insertion of a set takes log(n) time
 and it would only insert 1 time, hence the best case would be O(log(n)).
