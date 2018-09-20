@@ -14,6 +14,8 @@ Best case time complexity: O(1)
 
 Average case time complexity: O(nlog(n))
 
+Worst case time complexity: O(nlog(n))
+
 Best case for this problem is O(1) which could be obtained if there is only 1 lantern in a 1 length street. In this case no loops occur,
 hence the best case would be O(1).
 
@@ -30,6 +32,8 @@ Best case time complexity: O(log(n))
 
 Average case time complexity: O(nlog(n))
 
+Worst case time complexity: O(nlog(n))
+
 Best case for this problem is O(log(n)) which could be obtained if each of the 4 method are equal and occur only once. Insertion of a 
 set takes O(log(n)) time and it would only insert once per loop, hence best case would be O(log(n)).
 
@@ -44,6 +48,8 @@ the set is equal to the total number of levels, then it is possible to pass all 
 Best case time complexity: O(log(n))
 
 Average case time complexity: O(nlog(n))
+
+Worst case time complexity: O(nlog(n))
 
 Best case for this problem is O(log(n)) which could be obtained if each boy can only pass 1 level. Insertion of a set takes log(n) time
 and it would only insert 1 time, hence the best case would be O(log(n)).
