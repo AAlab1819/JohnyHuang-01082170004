@@ -1,0 +1,54 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+char board[1000][1000];
+int boardVisited[1000][1000]={0};
+int ans[1000000]={0};
+int paintingsViewed=0;
+int keyCount=0;
+
+void DFS(int x, int y,int n,int m){
+    if(x>n||y>m)
+        return;
+    if(x<0||y<0)
+        return;
+    if(boardVisited[x][y]!=0)
+        return;
+    if(board[x][y]=='*'){
+        paintingsViewed++;
+        return;
+    }
+    boardVisited[x][y]=keyCount;
+    DFS(x-1,y, n, m);
+    DFS(x+1,y, n, m);
+    DFS(x,y-1, n, m);
+    DFS(x,y+1, n, m);
+    return;
+}
+
+int main()
+{
+    int n,m,k,x,y;
+    cin>>n>>m>>k;
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            cin>>board[i][j];
+        }
+    }
+    for(int i=0; i<n; i++){
+        for(int j=0; j<m; j++){
+            if(board[i][j]=='.'&&boardVisited[i][j]==0){
+                keyCount++;
+                paintingsViewed=0;
+                DFS(i,j,n,m);
+                ans[keyCount]=paintingsViewed;
+            }
+        }
+    }
+    for(int i=0; i<k; i++){
+        cin>>x>>y;
+        cout<<ans[boardVisited[x-1][y-1]]<<endl;
+    }
+    return 0;
+}
