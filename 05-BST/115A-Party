@@ -1,0 +1,22 @@
+#include <iostream>
+#include <map>
+using namespace std;
+
+int main()
+{
+    int n, p, tree_depth, next, group=0;
+    cin>>n;
+    map<int, int> superior;
+    for(int i=1; i<=n; i++){
+        cin>>p;
+        superior[i] = p; //Makes a tree with employee i being the child of manager p
+    }
+    for(int i=1; i<=n; i++){
+        tree_depth = 1;
+        for(next=superior[i]; next!=-1; next=superior[next]) //Traverses the tree until it reaches the root which is -1
+            tree_depth++;
+        group = max(tree_depth, group);
+    }
+    cout<<group;
+    return 0;
+}
