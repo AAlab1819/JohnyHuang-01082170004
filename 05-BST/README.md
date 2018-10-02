@@ -14,6 +14,8 @@ grouped by depth. To find the height of the trees we will traverse the tree bott
 we have reached the root in this case -1. We will also compare the depths every time until we finish to find the max height of the trees,
 which is also the minimum number of groups we need.
 
+Worse time complexity: O(nlogn)
+
 ### 4C-Registration System
 
 [Question](http://codeforces.com/problemset/problem/4/C)|[Answer](http://codeforces.com/contest/4/submission/43687957)
@@ -24,6 +26,8 @@ has been used. To solve this problem we can store the name and its occurance in 
 the name has already been taken, so it will print the name+occurance. Otherwise the name hasn't been taken and it will print "OK". To
 finish it off, after any of these processes it will then increment the name's occurance by 1.
 
+Worst time complexity: O(nlogn)
+
 ### 913B-Christmas Spruce
 
 [Question](http://codeforces.com/problemset/problem/913/B)|[Answer](http://codeforces.com/contest/913/submission/43691949)
@@ -33,3 +37,5 @@ Objective of problem 913B-Christmas Spruce is to find whether a rooted tree is a
 created using a vector of vector. We will then traverse the tree top-down and check each element if it is a leaf or has 3 leaf. A leaf
 can be found if it's vector is empty signifying that it has no child. If an element is not a leaf and has less than 3 leaf, then the tree
 is not a spruce, therefore ending the process. Otherwise the process will reach its end and the tree is therefore a spruce.
+
+Worst time complexity: O(nlogn)
