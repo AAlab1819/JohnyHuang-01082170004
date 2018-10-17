@@ -1,0 +1,37 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n, a;
+    double median = 0;
+    cin>>n;
+    priority_queue<int> maxHeap;
+    priority_queue<int, vector<int>, greater<int> > minHeap;
+    for(int i=0; i<n; i++){
+        cin>>a;
+        if(a <= median) //Inserts number smaller than median to max heap and vice versa
+            maxHeap.push(a);
+        else
+            minHeap.push(a);
+
+        if(minHeap.size()>maxHeap.size()+1){ //Balances both heaps if size difference is larger than 1
+            maxHeap.push(minHeap.top());
+            minHeap.pop();
+        }
+        if(maxHeap.size()>minHeap.size()+1){
+            minHeap.push(maxHeap.top());
+            maxHeap.pop();
+        }
+
+        if(minHeap.size() == maxHeap.size()) //List of numbers is even, so find average of 2 middle number
+            median = (maxHeap.top()+minHeap.top())/2.0;
+        else if (minHeap.size() > maxHeap.size()) //Min heap contains median on its root
+            median = (double)minHeap.top();
+        else if (maxHeap.size() > minHeap.size()) //Max heap contains median on its root
+            median = (double)maxHeap.top();
+        printf("%.1f\n",median);
+
+    }
+    return 0;
+}
