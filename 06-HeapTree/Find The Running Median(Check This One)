@@ -1,0 +1,65 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+vector<int> heapify(vector<int> num)
+{
+    for(int i=num.size()/2; i>=0; i--) {
+        int parent = i;
+        int left = (2*i)+1;
+        int right = (2*i)+2;
+        if(left < num.size()) {
+            if(num[parent] < num[left]) {
+                swap(num[parent], num[left]);
+            }
+        }
+        if(right < num.size()) {
+            if(num[parent] < num[right]) {
+                swap(num[parent], num[right]);
+            }
+        }
+    }
+    return num;
+}
+
+void findMedian(vector<int> num)
+{
+    cout << setprecision(1) << fixed;
+    if(num.size()%2==1) {
+        if(num.size()==1) cout << num[0]/1.0 << endl;
+        else cout << num[num.size()/2]/1.0 << endl;
+    } else {
+        cout << (num[num.size()/2]+num[num.size()/2-1])/2.0 << endl;
+    }
+}
+
+vector<int> heapsort(vector<int> num)
+{
+    int temp[num.size()];
+    vector<int> sorted;
+    for(int i=0; i<num.size(); i++) {
+        temp[(num.size()-1)-i] = num[0];
+        num[0] = -1;
+        num = heapify(num);
+    }
+    for(int i=0; i<num.size(); i++) {
+        sorted.push_back(temp[i]);
+    }
+    return sorted;
+}
+
+int main()
+{
+    vector<int> num;
+    vector<int> median;
+    int n; cin >> n;
+    int input;
+    for(int i=0; i<n; i++) {
+        cin >> input;
+        num.push_back(input);
+        num = heapify(num);
+        median = heapsort(num);
+        findMedian(median);
+    }
+    return 0;
+}
