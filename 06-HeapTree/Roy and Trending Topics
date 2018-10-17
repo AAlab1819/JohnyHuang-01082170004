@@ -1,0 +1,26 @@
+#include <iostream>
+#include <vector>
+#include <algorithm>
+#include <utility>
+using namespace std;
+
+int main()
+{
+    int n, id, z, p, l , c, s, increment, z_new, change;
+    cin>>n;
+    vector<pair<int, pair<int, int> > > heap;
+    for(int i=0; i<n; i++){
+        cin>>id>>z>>p>>l>>c>>s;
+        z_new = (p*50) + (l*5) + (c*10) + (s*20);
+        change = z_new - z;
+        heap.push_back(make_pair(change, make_pair(id, z_new))); //change is key of heap
+    }
+    make_heap(heap.begin(), heap.end());
+    for(int i=0; i<5; i++){
+        cout<<heap.front().second.first<<" "<<heap.front().second.second;
+        cout<<endl;
+        pop_heap(heap.begin(), heap.end());
+        heap.pop_back();
+    }
+    return 0;
+}
