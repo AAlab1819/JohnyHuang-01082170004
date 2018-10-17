@@ -13,7 +13,7 @@ using the increment in popularity score as the key for each node. Upon inputting
 in popularity score is immidiately calculated using the formula 
 
 ```
-Increase popularity score = (50 x posts) + (5 x likes) + (10 x comments) + (20 x shares)
+Increase popularity score = (50 x posts) + (5 x likes) + (10 x comments) + (20 x shares) - popularity score
 ```
 A new node is then created which stores the topic ID and the increase popularity score as its Key. After adding every topic into the heap tree,
 it is then max heapified to get the topic with the highest increase popularity score as the root of the heap tree. The process of extracting
