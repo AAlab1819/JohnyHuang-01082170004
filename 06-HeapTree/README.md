@@ -15,9 +15,8 @@ in popularity score is immidiately calculated using the formula
 ```
 Increase popularity score = (50 x posts) + (5 x likes) + (10 x comments) + (20 x shares) - popularity score
 ```
-A new node is then created which stores the topic ID and the increase popularity score as its Key. After adding every topic into the heap tree,
-it is then max heapified to get the topic with the highest increase popularity score as the root of the heap tree. The process of extracting
-the root of heap and heapify is done 5 times to get the 5 topics with the highest increase in popularity score.
+A new node is then created which stores the topic ID, old popularity, new popularity and the increase popularity score as its Key. After adding every topic into the heap tree,
+it is then max heapified to get the topic with the highest increase popularity score as the root of the heap tree. The tree is then heap sorted to sort the heap ascendingly, after which the top 5 topics that has the most increase in popularity score can be easily found.
 
 Worst time complexity: O(nlogn)
 
@@ -29,13 +28,9 @@ Objective of the problem "Find the Running Median" is to find the median of a li
 sized list will be the element in the middle of the sorted list. While the median of an even sized list will be the average of the 2 elements
 in the middle of the sorted list. 
 
-The solution to this problem can be found using a 2 heap tree with the number as the key for the node. 
-The first tree will be a min heap that stores numbers that are bigger than the current median, and the second tree will be a max heap that
-stores the numbers that are smaller than the current median. The median will start out as 0 and will be updated as nodes are inserted. 
-After inserting a node, the size of the trees will be compared, and if their size difference is greater than 1, the root of the max heap
-will be moved to the min heap and vice versa depending on which tree is larger with the larger tree having its root node transfered. This 
-is done to keep the size of the trees balanced which will be used to find which scenario of median calculation is used. If the size of 
-the max heap is larger than the min heap, the root of the max heap will be the new median and vice versa. However, if the size of the 
-heaps are similar, then the average of the root of the max and min heap is used as the new median. 
+The solution to this problem can be found using a heap tree. After each number input, the number is inserted into the heap tree and
+the tree is sorted using heapsort. It is then possible to find the median of the current list by finding the middle element of the 
+sorted list. If the list is odd then middle element is median, however if it is event, then the 2 middlemost number is averaged to find
+the median.
 
 Worst time complexity: O(nlogn)
