@@ -1,0 +1,21 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int n, xCounter = 0, xDelete = 0 ;
+    cin>>n;
+    string file;
+    cin>>file;
+    for(int i=0; i<n; i++){
+        if(file[i]=='x')
+            xCounter++;
+        else
+            xCounter = 0;
+        if(xCounter>=3)
+            xDelete++;
+    }
+    cout<<xDelete;
+    return 0;
+}
