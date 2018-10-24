@@ -27,8 +27,7 @@ Worst Time Complexity: O(n)
 
 THe objective of problem 731B Coupon and Discount is to find if it is possible to buy pizzas using only discount and coupons given **n** days and **n** teams each day.
 Discounts are used to buy 2 pizzas in a day, and coupons are used to buy 1 pizza in 2 consecutive days. The number of discounts and coupons
-that can be used each days is unlimited. The solution to this problem can be found by iterating through the days and checking whether the number of teams that day is odd 
-or even. Optimally, all pizzas in a day will be bought using discounts, unless the teams is odd which then a coupon will be used. If a coupon is used in
+that can be used each days is unlimited. The solution to this problem can be found by iterating through the days and checking whether the number of teams that day is odd Optimally, all pizzas in a day will be bought using discounts, unless the teams is odd which then a coupon will be used. If a coupon is used in
 the previous day then a pizza will be subtracted from today. If at any point there is an odd number of teams and no pizza is needed the next day then
 it is impossible to buy pizzas using only discount and coupons.
 
