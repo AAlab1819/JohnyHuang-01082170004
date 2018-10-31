@@ -1,0 +1,38 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    long long int n, m, inp, type, l , r, ans;
+    cin>>n;
+    long long int type1Arr[n], type2Arr[n];
+    for(int i=0; i<n; i++){
+        cin>>inp;
+        type1Arr[i] = inp;
+        type2Arr[i] = inp;
+    }
+    for(int i=1; i<n; i++){
+        type1Arr[i] += type1Arr[i-1];
+    }
+    sort(type2Arr, type2Arr+n);
+    for(int i=1; i<n; i++){
+        type2Arr[i] += type2Arr[i-1];
+    }
+    cin>>m;
+    for(int i=0; i<m; i++){
+        cin>>type>>l>>r;
+        if(type == 1){
+            if(l == 1)
+                ans = type1Arr[r-1];
+            else
+                ans = type1Arr[r-1]-type1Arr[l-2];
+        }else{
+            if(l == 1)
+                ans = type2Arr[r-1];
+            else
+                ans = type2Arr[r-1]-type2Arr[l-2];
+        }
+        cout<<ans<<endl;
+    }
+    return 0;
+}
