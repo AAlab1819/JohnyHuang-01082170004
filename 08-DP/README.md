@@ -22,7 +22,7 @@ Sum[r] - Sum[l-1] = Sum(Within) + Sum(Before) - Sum(Before)
                   = Sum(Within)
 ```
 
-Yime conplexity: O(nlogn)
+Time conplexity: O(nlogn)
 
 ### 913C Party Lemonade
 
