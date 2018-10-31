@@ -22,6 +22,8 @@ Sum[r] - Sum[l-1] = Sum(Within) + Sum(Before) - Sum(Before)
                   = Sum(Within)
 ```
 
+Yime conplexity: O(nlogn)
+
 ### 913C Party Lemonade
 
 [Question](http://codeforces.com/problemset/problem/913/C)|[Answer](http://codeforces.com/contest/913/submission/45141187)
@@ -87,4 +89,6 @@ L = 1 - 1
 ans = minimum of (40, 30 + 0 * 10)
     = 30
 ```
+
+Time complexity: O(n)
 
