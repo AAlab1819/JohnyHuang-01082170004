@@ -1,0 +1,26 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n, l, needBottle;
+    long long int ans = 4e18, sum = 0; //4e18 is almost maximum value for long long int, such extreme number is used in case price for comparison is also nuts
+    cin>>n>>l;
+    int c[n];
+    for(int i=0; i<n; i++){
+        cin>>c[i];
+    }
+    for(int i=1; i<n; i++){
+        if(c[i]>2*c[i-1]) //Optimization of list
+            c[i] = 2*c[i-1];
+    }
+    for(int i=n-1; i>=0; i--){
+        needBottle = l / (1<<i); //How much bottle can be used, if need is 0 then L in bottle is more than needed
+        sum += (long long) needBottle * c[i]; //Sum of previous sum + bottle needed * price
+        l -= needBottle << i; // L left after subtracting L covered by needBottle
+        ans = min(ans, sum + (l>0) * c[i]); //Compare previous best price by current sum of price + c[i] if L still needed
+    }
+    cout<<ans;
+    return 0;
+}
