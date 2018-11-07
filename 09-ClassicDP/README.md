@@ -9,12 +9,12 @@ items, its weight and price, and 1 of each items. This case also adds an extra c
 the sack for each family member in a family, given they each can carry a specified max weight. 
 The solution to this problem can be found using 
 
-DP, where we store the maximum value we can get in a table of item weight x max sack weight. To find the value to input into each table
+DP, where we store the maximum value we can get in a table of max sack weight x item number. To find the value to input into each table
 element, we have 3 case. The first case is if either item weight or max sack weight is 0, then we will input 0. Second case
 is if the weight of the current item is less than the current max weight, then we will find the maximum value between the element above it
 or the current price + optimal price of remaining weight. Third case is if current item weight is greater than max weight, then it directly
 takes the value from the element above. As there is varying max weight in respect to each family member, we take the values that is at the
-last item x max weight of family member, and add them all together, but since I'm lazy so i just repeat the DP process for each family member
+(max weight of family member, last item index), and add them all together, but since I'm lazy so i just repeat the DP process for each family member
 and its still AC.
 
 Example:
