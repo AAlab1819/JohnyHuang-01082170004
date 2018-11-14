@@ -1,5 +1,19 @@
 # Week 10 Solution
 
+### 20C Dijkstra?
+
+[Question](http://codeforces.com/problemset/problem/20/C)|[Answer](http://codeforces.com/contest/20/submission/45712351)
+
+Problem 20C Dijkstra? asks us to print out the shortest path from point 1 to n. We are given a set of undirected path with their own 
+weights. 
+
+The solution to this problem can be done using dijkstra with priority queue. Starting from 1, we make a priority queue of all its edges 
+storing their accumulated weight and vertex. It will then move on to the next highest priority, which is the edge with least weight, and
+then update the priority queue with its edges. This will go on until we reach the node n, after which we will then print back the vertexes
+of the shortest path to n.
+
+Time Complexity: O(nLogm)
+
 ### 601A The Two Routes
 
 [Question](http://codeforces.com/problemset/problem/601/A)|[Answer](http://codeforces.com/contest/601/submission/45708855)
